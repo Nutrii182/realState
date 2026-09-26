@@ -1,0 +1,44 @@
+.search-section {
+  background-color: #1a2433;
+}
+
+.search-label {
+  color: #6c757d;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.btn-select {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+/* Botón Rojo Wix: Controlamos el ancho en móvil */
+.btn-wix-red {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  min-width: 140px; /* Evita que sea minúsculo pero no deja que sea gigante */
+}
+
+.btn-wix-outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.dropdown-menu-dark {
+  background-color: #1a2433;
+  border: 1px solid rgba(255,255,255,0.1);
+}

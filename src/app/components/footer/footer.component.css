@@ -1,0 +1,36 @@
+.footer-container {
+  background-color: #1a2433;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.text-blue-link {
+  color: #3880ff !important;
+}
+
+/* Redes sociales con tus colores de marca en hover */
+.social-icon {
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.ig:hover { color: #E4405F !important; }
+.fb:hover { color: #1877F2 !important; }
+
+/* Aseguramos que el tracking del logo se vea pro */
+.tracking-widest {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    padding-bottom: 40px;
+  }
+}

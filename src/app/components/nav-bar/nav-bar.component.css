@@ -1,0 +1,26 @@
+.bg-dark-blue { background-color: #1a2433 !important; }
+.flex-basis-0 { flex-basis: 0; }
+
+.nav-link { color: rgba(255,255,255,0.7) !important; font-size: 0.75rem; transition: 0.3s; }
+.nav-link.active, .nav-link:hover { color: #f44336 !important; }
+
+.social-icon { color: white; opacity: 0.6; transition: 0.3s; text-decoration: none; }
+.social-icon:hover { opacity: 1; transform: translateY(-3px); }
+
+.wa:hover { color: #25D366 !important; }
+.ig:hover { color: #E4405F !important; }
+.fb:hover { color: #1877F2 !important; }
+.x:hover { color: #ffffff !important; }
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #1a2433;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  }
+}

@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- LAYOUT Y STICKY FOOTER --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #0f172a;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* --- NAVBAR Y MENÚ MÓVIL (Líneas completas) --- */
+.bg-dark-blue { background-color: #1a2433 !important; }
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #1a2433;
+    padding: 0 !important; /* Quitamos el padding para que las líneas toquen los bordes */
+    position: absolute;
+    top: 100%; width: 100%; left: 0;
+    z-index: 1000;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%; /* Línea de lado a lado */
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* --- BUSCADOR: DIVISIONES VERTICALES --- */
+.divider-vertical {
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+@media (max-width: 991px) {
+  .divider-vertical {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+/* --- HOVERS REDES SOCIALES (6 Iconos) --- */
+.social-icon { color: white; opacity: 0.7; transition: 0.3s; text-decoration: none; }
+.social-icon:hover { opacity: 1; transform: translateY(-3px); }
+
+.wa:hover { color: #25D366 !important; }
+.ig:hover { color: #E4405F !important; }
+.tk:hover { color: #00f2ea !important; }
+.fb:hover { color: #1877F2 !important; }
+.x:hover  { color: #ffffff !important; }
+.in:hover { color: #0A66C2 !important; }
+
+/* --- OTROS ESTILOS --- */
+.nav-link.active { color: #f44336 !important; }
+.btn-wix-red { background-color: #f44336; color: white; border: none; border-radius: 4px; }
+.footer-main { background-color: #1a2433; border-top: 1px solid rgba(255, 255, 255, 0.05); }
