@@ -1,0 +1,59 @@
+.user-home {
+  display: grid;
+  min-height: 100%;
+  padding-block: 2rem;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 50% 40%, var(--color-surface) 0%, transparent 70%),
+    var(--color-page);
+}
+
+.user-home-card {
+  width: min(100%, 38rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  box-shadow: 0 1rem 2.5rem rgba(36, 49, 61, 0.08);
+  text-align: center;
+}
+
+.user-home-mark {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  place-items: center;
+  border: 1px solid rgba(168, 63, 50, 0.22);
+  border-radius: 50%;
+  background: #f8e9e6;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.user-home-eyebrow {
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.user-home-card h1 {
+  color: var(--color-text);
+  font-size: clamp(1.7rem, 6vw, 2.25rem);
+  font-weight: 700;
+}
+
+.user-home-description,
+.user-home-notice {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.user-home-notice {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.6rem;
+  background: var(--color-page);
+  font-size: 0.85rem;
+}

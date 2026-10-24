@@ -1,0 +1,44 @@
+.flex-basis-0 { flex-basis: 0; }
+
+.nav-link { color: #455361 !important; font-size: 0.75rem; transition: color 0.2s ease; }
+.nav-link.active, .nav-link:hover { color: var(--color-accent) !important; }
+
+.account-link {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.account-link i {
+  font-size: 1.2rem;
+}
+
+.account-label {
+  display: none;
+}
+
+.social-icon { color: var(--color-text-muted); transition: color 0.2s ease, transform 0.2s ease; text-decoration: none; }
+.social-icon:hover { transform: translateY(-2px); }
+
+.wa:hover { color: #25D366 !important; }
+.ig:hover { color: #E4405F !important; }
+.fb:hover { color: #1877F2 !important; }
+.x:hover { color: #ffffff !important; }
+
+@media (max-width: 991px) {
+  .account-label {
+    display: inline;
+  }
+
+  .navbar-collapse {
+    background-color: var(--color-surface);
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 12px 28px rgba(36, 49, 61, 0.12);
+  }
+}

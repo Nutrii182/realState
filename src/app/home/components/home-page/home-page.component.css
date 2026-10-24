@@ -1,0 +1,50 @@
+.home-hero {
+  display: grid;
+  min-height: clamp(24rem, 52vh, 40rem);
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, var(--color-surface) 0%, transparent 68%),
+    var(--color-page);
+}
+
+.home-hero-content {
+  width: min(100%, 48rem);
+  padding: 3rem 0;
+}
+
+.home-hero-mark {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  place-items: center;
+  border: 1px solid rgba(168, 63, 50, 0.24);
+  border-radius: 50%;
+  background: #f8e9e6;
+  color: var(--color-accent);
+  font-size: 1.6rem;
+}
+
+.home-hero-eyebrow {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.home-hero-title {
+  color: var(--color-text);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.home-hero-description {
+  max-width: 34rem;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  line-height: 1.7;
+}

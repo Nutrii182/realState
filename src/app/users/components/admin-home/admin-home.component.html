@@ -1,0 +1,28 @@
+<section class="admin-page container-fluid px-3 px-md-4" aria-labelledby="admin-title">
+  @if (!(isInitialized$ | async) || (isLoading$ | async)) {
+    <div class="admin-loading" role="status" aria-live="polite">
+      <span class="spinner-border" aria-hidden="true"></span>
+      <span>Cargando el panel de administración...</span>
+    </div>
+  } @else if (error$ | async; as error) {
+    <div class="admin-error alert" role="alert">
+      <i class="bi bi-exclamation-circle" aria-hidden="true"></i>
+      <span>{{ error }}</span>
+    </div>
+  } @else {
+    <header class="admin-header">
+      <div>
+        <p class="admin-eyebrow text-uppercase mb-2">Administración</p>
+        <h1 id="admin-title">Panel principal</h1>
+        <p class="admin-description mb-0">Gestiona los usuarios de la plataforma.</p>
+      </div>
+      <span class="admin-user-count">{{ (users$ | async)?.length ?? 0 }} usuarios</span>
+    </header>
+
+    <section class="admin-content" aria-label="Usuarios">
+      @if ((users$ | async)?.length === 0) {
+        <p class="mb-0">Todavía no hay usuarios para mostrar.</p>
+      }
+    </section>
+  }
+</section>

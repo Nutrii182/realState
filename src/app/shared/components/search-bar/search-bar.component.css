@@ -1,0 +1,54 @@
+.search-section {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-border) !important;
+}
+
+.search-label {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.search-actions {
+  align-self: center;
+}
+
+.btn-select {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+/* Botón Rojo Wix: Controlamos el ancho en móvil */
+.btn-wix-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+@media (max-width: 575.98px) {
+  .search-field {
+    padding: 0.85rem 1rem !important;
+  }
+
+  .search-actions {
+    padding: 1rem !important;
+  }
+
+  .search-actions .btn-wix-red {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .search-actions {
+    transform: translateY(0.625rem);
+  }
+}

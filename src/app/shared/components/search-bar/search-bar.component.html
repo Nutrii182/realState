@@ -1,0 +1,60 @@
+<div class="search-section border-top border-bottom border-secondary border-opacity-10 py-3 py-lg-0">
+  <div class="container-fluid px-lg-5">
+    <form class="row g-0 align-items-center">
+
+      <div class="search-field col-12 col-md-6 col-lg-2 p-3 divider-vertical">
+        <label class="search-label text-uppercase mb-1 d-block">Operación</label>
+        <div class="dropdown">
+          <button class="filter-select btn btn-link text-decoration-none dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar operación">{{ selectedOperation }}</button>
+          <div class="dropdown-menu w-100">
+            @for (option of operationOptions; track option) {
+              <button class="dropdown-item" type="button" (click)="selectedOperation = option">{{ option }}</button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="search-field col-12 col-md-6 col-lg-3 p-3 divider-vertical">
+        <label class="search-label text-uppercase mb-1 d-block">Inmueble</label>
+        <div class="dropdown">
+          <button class="filter-select btn btn-link text-decoration-none dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar inmueble">{{ selectedProperty }}</button>
+          <div class="dropdown-menu w-100">
+            @for (option of propertyOptions; track option) {
+              <button class="dropdown-item" type="button" (click)="selectedProperty = option">{{ option }}</button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="search-field col-12 col-md-6 col-lg-3 p-3 divider-vertical">
+        <label class="search-label text-uppercase mb-1 d-block">Ciudad</label>
+        <div class="dropdown">
+          <button class="filter-select btn btn-link text-decoration-none dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar ciudad">{{ selectedCity }}</button>
+          <div class="dropdown-menu w-100">
+            @for (option of cityOptions; track option) {
+              <button class="dropdown-item" type="button" (click)="selectedCity = option">{{ option }}</button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="search-field col-12 col-md-6 col-lg-2 p-3 divider-vertical">
+        <label class="search-label text-uppercase mb-1 d-block">Zona</label>
+        <div class="dropdown">
+          <button class="filter-select btn btn-link text-decoration-none dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar zona">{{ selectedZone }}</button>
+          <div class="dropdown-menu w-100">
+            @for (option of zoneOptions; track option) {
+              <button class="dropdown-item" type="button" (click)="selectedZone = option">{{ option }}</button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="search-actions col-12 col-lg-2 p-3 d-flex gap-2 justify-content-center justify-content-lg-end">
+        <button type="submit" class="btn-wix-red px-4 py-2 fw-bold text-uppercase shadow-none">Buscar</button>
+        <button type="button" class="clear-search-button btn py-2 px-3" aria-label="Limpiar filtros"><i class="bi bi-eraser" aria-hidden="true"></i></button>
+      </div>
+
+    </form>
+  </div>
+</div>

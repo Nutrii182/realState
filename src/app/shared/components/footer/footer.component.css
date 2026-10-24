@@ -1,0 +1,81 @@
+.footer-main {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 0;
+  background-color: var(--color-surface-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-main::before {
+  position: absolute;
+  top: -1px;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(168, 63, 50, 0.55), transparent);
+}
+
+.footer-brand {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: var(--color-text-muted) !important;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.footer-email {
+  color: var(--color-text);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+  color: var(--color-accent-hover);
+}
+
+.footer-legal {
+  color: var(--color-text-muted) !important;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 767.98px) {
+  .footer-main {
+    padding: 0.65rem 0;
+  }
+
+  .footer-main .row {
+    --bs-gutter-y: 0.35rem;
+    align-items: center;
+  }
+
+  .footer-brand {
+    font-size: 0.72rem;
+  }
+
+  .footer-legal {
+    font-size: 0.56rem;
+  }
+
+  .footer-email {
+    font-size: 0.65rem;
+  }
+
+  .footer-email .bi {
+    margin-right: 0.2rem !important;
+  }
+
+  .footer-address {
+    order: 2;
+    font-size: 0.62rem;
+  }
+}

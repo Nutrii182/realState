@@ -1,0 +1,82 @@
+<section class="login-page container-fluid px-3 px-sm-4" aria-labelledby="login-title">
+  <div class="login-card">
+    <div class="login-mark" aria-hidden="true">
+      <i class="bi bi-person-lock"></i>
+    </div>
+
+    <div class="login-header text-center mb-4">
+      <h1 class="login-title mb-2" id="login-title">Iniciar sesión</h1>
+      <p class="login-description mb-4">Accede a tu cuenta de Real Estate.</p>
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+      <div class="mb-3">
+        <label class="form-label" for="login-email">Correo electrónico</label>
+        <input
+          class="form-control login-input"
+          id="login-email"
+          #emailInput="ngModel"
+          name="email"
+          type="email"
+          autocomplete="username"
+          placeholder="nombre@correo.com"
+          required
+          email
+          [attr.aria-invalid]="emailInput.invalid && (emailInput.touched || loginForm.submitted)"
+          aria-describedby="login-email-error"
+          ngModel>
+        @if (emailInput.invalid && (emailInput.touched || loginForm.submitted)) {
+          <p class="login-field-error mb-0 mt-1" id="login-email-error">
+            @if (emailInput.hasError('required')) {
+              El correo electrónico es obligatorio.
+            } @else if (emailInput.hasError('email')) {
+              Ingresa un correo electrónico válido.
+            }
+          </p>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="login-password">Contraseña</label>
+        <div class="input-group login-password-group">
+          <input
+            class="form-control login-input"
+            id="login-password"
+            #passwordInput="ngModel"
+            name="password"
+            [type]="showPassword ? 'text' : 'password'"
+            autocomplete="current-password"
+            placeholder="Ingresa tu contraseña"
+            required
+            minlength="8"
+            [attr.aria-invalid]="passwordInput.invalid && (passwordInput.touched || loginForm.submitted)"
+            aria-describedby="login-password-error"
+            ngModel>
+          <button
+            class="btn login-password-toggle"
+            type="button"
+            [attr.aria-label]="showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'"
+            [attr.aria-pressed]="showPassword"
+            (click)="togglePasswordVisibility()">
+            <i class="bi" [class.bi-eye]="!showPassword" [class.bi-eye-slash]="showPassword" aria-hidden="true"></i>
+          </button>
+        </div>
+        @if (passwordInput.invalid && (passwordInput.touched || loginForm.submitted)) {
+          <p class="login-field-error mb-0 mt-1" id="login-password-error">
+            @if (passwordInput.hasError('required')) {
+              La contraseña es obligatoria.
+            } @else if (passwordInput.hasError('minlength')) {
+              La contraseña debe tener al menos 8 caracteres.
+            }
+          </p>
+        }
+      </div>
+
+      <button class="btn-wix-red login-submit w-100 mt-2" type="submit">
+        Iniciar sesión
+      </button>
+    </form>
+
+    <p class="login-brand mt-4 mb-0">REAL ESTATE</p>
+  </div>
+</section>
